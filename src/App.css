@@ -1,38 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Varela+Round&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
 .App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #777;
+  color:#000;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 100vw;
+  height: 11vh;
+  background-color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  letter-spacing: .1rem;
+}
+.logo {
+  line-height: 5rem;
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+.menu {
+  background-color: transparent;
+  border: 1px solid #64a19d;
+  border-radius: 4px;
+  font-size: .9rem;
+  color: #64a19d;
+  height: 2.7rem;
+  width: 5.3rem;
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  display: inline-block;
+  padding-left: 2rem;
+  line-height: 5rem;
+  margin: 0 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #fff;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: none;
+  height: 0px;
+  overflow: hidden;
+  transition: all .2s;
+}
+
+.dropdown li {
+  height: 25px;
+  
+
+}
+
+.show {
+  height: 100px;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    display: inline;
+    margin: 1rem 5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-links {
+    display: none;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
   }
 }
